@@ -210,9 +210,14 @@
     <script src="index.js"></script>
     <script>
 
-      setTimeout(function () {
-        $("#otpbox1").focus();
-      }, 600);
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#otpbox1").focus();
+          $("#otpbox1").click();
+        }, 600);
+      })
+
+
       // $("#otpbox1").trigger("click");
 
 

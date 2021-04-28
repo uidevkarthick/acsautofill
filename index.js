@@ -285,14 +285,14 @@ function container2(ht, htn) {
   }
 }
 //Footer adjustment
-// function foot1(hgt, pos) {
-//   if (window.screen.width <= 599 && window.screen.width >= 500) {
-//     document.getElementById("footer").style.height = hgt + "px";
-//     document.getElementById("expirewrapper").style.bottom = pos + "px";
-//   } else {
-//     return null;
-//   }
-// }
+function foot1(hgt, pos) {
+  if (window.screen.width <= 599 && window.screen.width >= 500) {
+    document.getElementById("footer").style.height = hgt + "px";
+    document.getElementById("expirewrapper").style.bottom = pos + "px";
+  } else {
+    return null;
+  }
+}
 //resend timer
 
 //Tabbar configuration
@@ -424,14 +424,14 @@ document
     }, 3000);
   });
 
-document
-  .getElementById("resendOTPbtn2")
-  .addEventListener("click", function Resendbtn() {
-    this.style.color = "green";
-    setTimeout(() => {
-      this.style.color = "#2a1563";
-    }, 3000);
-  });
+// document
+//   .getElementById("resendOTPbtn2")
+//   .addEventListener("click", function Resendbtn() {
+//     this.style.color = "green";
+//     setTimeout(() => {
+//       this.style.color = "#2a1563";
+//     }, 3000);
+//   });
 
 function msgbox(response = "Response Message") {
   box();
@@ -524,10 +524,10 @@ function mindate() {
   var todat = document.getElementById("todatebox");
   todat.min = dat;
 
-  if (!document.getElementById("preauth").checked) {
-    document.getElementById("nooftrans").value = "";
-    todat.value = "";
-  }
+  // if (!document.getElementById("preauth").checked) {
+  //   document.getElementById("nooftrans").value = "";
+  //   todat.value = "";
+  // }
 }
 
 //radio change one as block other as value null

@@ -213,10 +213,13 @@
 
       $(document).ready(function () {
 
-        setTimeout(() => {
-          $("#otpbox1").on("click", function () { $(this).focus() });
-        }, 600);
-        $("#otpbox1").on("click", function () { $(this).focus() });
+
+        $("#otpbox1").on("click", function () {
+          this.setAttribute('autofocus', 'autofocus');
+          $(this).focus();
+        });
+
+        // $("#otpbox1").on("click", function () { $(this).focus() });
         $("#otpbox1").trigger("click");
 
       });

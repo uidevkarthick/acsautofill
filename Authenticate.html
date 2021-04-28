@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ACS Authentication</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      color: #011a3a;
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+    }
+
+    .copyright {
+      color: #011a3a;
+    }
+
+    .bg_header {
+      background-color: #001a3a;
+      padding: 0px 0px;
+    }
+
+    .bg_subheader {
+      background-color: #e2e2e2;
+      padding: 40px;
+    }
+
+    .otp-section {
+      background-color: whitesmoke;
+      padding: 15px;
+      border: 3px solid whitesmoke;
+    }
+
+    .opt-mainsection {
+      padding: 0px 50px !important;
+    }
+
+    .opt-subsection {
+      border: 3px solid whitesmoke;
+      border-top-color: red;
+      background-color: white;
+      z-index: 1000;
+      margin-top: -65px;
+    }
+
+    input#otp {
+      margin-left: 150px;
+    }
+
+    span.m_name {
+      padding-left: 143px;
+      font-weight: bold;
+    }
+
+    .btn-opt {
+      color: #fff;
+      background-color: #011a3a;
+      border-color: #011a3a;
+    }
+
+    p.u_info {
+      font-weight: bold;
+      margin-bottom: 5px !important;
+    }
+
+    .resend-otp {
+      margin-left: 30px;
+    }
+
+    .footer-logo {
+      width: 100px;
+    }
+
+    @media only screen and (max-width: 996px) and (min-width: 770px) {
+      span.m_name {
+        padding-left: 20px;
+        font-weight: bold;
+      }
+
+      input#otp {
+        margin-left: 25px;
+      }
+
+      .resend-otp {
+        margin-left: 0px;
+      }
+
+      .mb-pd {
+        margin-top: 15px;
+      }
+
+      .footer-logo {
+        width: 75px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      span.m_name {
+        padding-left: 10px;
+        font-weight: bold;
+      }
+
+      input#otp {
+        margin-left: 10px;
+        width: 100px;
+      }
+
+      .resend-otp {
+        margin-left: 0px;
+
+      }
+
+      .mb-pd {
+        margin-top: 15px;
+      }
+
+      .footer-logo {
+        width: 50px;
+      }
+
+      .copyright {
+        color: #011a3a;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row bg_header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Bank/logo -->
+          <div class="navbar-header">
+            <a class="" href="#">
+              <img src="" alt="logo" style="width:100px;">
+            </a>
+          </div>
+          <ul class="navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="" href="#">
+                <img src="" alt="logo" style="width:100px;">
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        </nav>
+      </div>
+    </div>
+    <div class="row bg_subheader">
+    </div>
+    <div class="row">
+      <div class="container opt-mainsection">
+        <section class="opt-subsection">
+          <p class="p-3">Please enter your Received OTP in the field below to confirm your identity for this purchase,
+            This information is not
+            shared with the merchant.</p>
+          <div class="row p-3">
+            <div class="col-md-8 col-12">
+              <div class="otp-section">
+                <div class="row">
+                  <p class="col-12">Name<span class="m_name"></span></p>
+                  <div class="col-12">
+                    <form action="Javascript:void(0)">
+                      <label for="fname">OTP</label>
+                      <input type="text" id="authValue" name="otp">
+                      <button type="button" class="resend-otp btn btn-opt" id="resend">Resend</button><br><br>
+                    </form>
+                    <div class="row">
+                      <div class="col-6">
+                        <button type="button" id="otpsubmit" class="btn btn-opt float-right">Submit</button>
+                      </div>
+                      <div class="col-6">
+                        <button type="button" class="btn btn-opt" onclick="cancelled()">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <p id="message" style="display: none;"></p>
+                  </div>
+                  <div class="col-12">
+                    <p class="pt-3 mb-0 u_info">page will expire in <span id="exprire_time"></span> minutes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 mb-pd">
+              <p class="u_info">Merchant Name</p>
+              <p class="p_mb"><span></span></p>
+              <p class="u_info">Total Charges</p>
+              <p class="p_mb"><span></span></p>
+              <p class="u_info">Date</p>
+              <p class="p_mb" id="date"></p>
+              <p class="u_info">Card Number</p>
+              <p class="p_mb"><span></span></p>
+              <p class="u_info">Personal Message</p>
+              <p class="p_mb">Banking Always</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <input type="text" id="txnid" th:value="${result.txnid}" hidden>
+    <input type="text" id="bankCode" th:value="${result.bankCode}" hidden>
+    <form action="" name="PAResform" id="merchant" method="POST">
+      <input type="text" name="PaRes" id="pares" hidden>
+      <input type="text" name="MD" id="md" hidden>
+    </form>
+    <footer>
+      <div class="row">
+        <div class="container">
+          <nav class="navbar">
+            <!-- Brand/logo -->
+            <div class="navbar-header">
+              <a class="" href="#">
+                <img class="footer-logo" alt="logo"><span
+                  class="copyright">copyrights @ All
+                  Rights Reserved.</span>
+              </a>
+            </div>
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item">
+                <a class="" href="#">
+                  <img class="footer-logo" alt="logo">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <p hidden id="key"></p>
+  <script>
+    // Set the date we're counting down to
+    var presentDate = new Date().getTime();
+    var countDownDate = new Date(presentDate + 5 * 60000).getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("exprire_time").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("exprire_time").innerHTML = "EXPIRED";
+        expired();
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>

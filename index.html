@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="screen" href="styles.css">
+    <style>
+      .config {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+    </style>
+  </head>
+
+  <body id="body" style="visibility: visible;">
+    <div class="seamlesspopup" id="seamlesspopup">
+      <div class="seamlesswrap" id="seamlesswrap">
+        <div class="optinheader">
+          <p class="optintext">Opt in for seamless pay</p>
+          <img src="img/crossbargrey.svg" class="optclose" id="optclose" onclick="closepopup();" alt="">
+        </div>
+        <div class="optinbody">
+          <div class="radiowrap">
+            <div class="seamlessdate">
+              <input type="radio" id="seamlessdate" class="seamlessradio" name="seamlessradio" value=""
+                onclick="seamless(event, 'seamlessdatewrap','nooftrans');" style="-webkit-appearance: radio;">
+              <label class="labelseamless" for="seamlessdate"> Select Date</label>
+            </div>
+            <div class="seamlesstrans">
+              <input type="radio" id="seamlesstransactions" class="seamlessradio" name="seamlessradio" value=""
+                onclick="seamless(event, 'seamlessnooftrans','todatebox');" style="-webkit-appearance: radio;">
+              <label class="labelseamless" for="seamlesstransactions"> No. of Transactions</label>
+            </div>
+          </div>
+          <div class="seamlessdatewrap choices" id="seamlessdatewrap">
+            <p style="margin-left: 0px;">Today</p>
+            <input type="date" class="datebox fromdatebox" id="fromdatebox" name="date[]" value="" placeholder=" "
+              disabled />
+            <input type="date" class="datebox todatebox" value="" id="todatebox" name="date[]" min="" max="2050-12-31"
+              placeholder="To date" />
+          </div>
+          <div class="seamlessnooftrans choices" id="seamlessnooftrans">
+            <p style="margin-left: 0px;">No. of Transactions</p>
+            <select name="nooftrans" class="nooftrans" id="nooftrans">
+              <option value="0">00</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+            </select>
+          </div>
+        </div>
+        <div class="donewrap">
+          <a class="seamlessdone" style="text-decoration: none;" onclick="donepopup();" href="#">Done</a>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="header">
+        <div class="logowrapper">
+          <div class="bankholder">
+            <img src="img/SBM-logo-wht.svg" id="bank_logo" />
+          </div>
+          <div class="visaholder">
+            <img src="img/Verified By Visa.svg" id="visa_logo" style="visibility: visible;" />
+          </div>
+        </div>
+      </div>
+      <div class="errorBoxcontainer">
+        <div class="errorBox" id="errorBox" style="visibility:hidden">
+          <img class="exclaim" id="exclaim" src="img/exclaim.png" alt="">
+          <p class="invalidotp" id="msginvalid">Invaild OTP</p>
+          <img class="crossbar" id="crossbar" src="img/crossbar.png" alt="" onclick="clserr();">
+        </div>
+      </div>
+      <div class="contentwrapper" style="visibility: visible;">
+        <div id="otpinfo">
+          <p class="otpins" id="otpins">Please enter the 6-digit OTP we have just sent to your registered mobile number
+            and/or email</p>
+        </div>
+        <div class="wrapperUser">
+          <div id="user_details">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  <p class="user_field">Merchant Name</p>
+                </td>
+                <td>
+                  <p class=" user_fieldValue" id="merchant_name"> FSS Shopping Private Limited</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="user_field">Total Charges</p>
+                </td>
+                <td>
+                  <p class=" user_fieldValue" id="charges"> Rs.6000.00</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="user_field">Date</p>
+                </td>
+                <td>
+                  <p class=" user_fieldValue" id="date"> November 08, 2020</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="user_field">Card Number</p>
+                </td>
+                <td>
+                  <p class=" user_fieldValue" id="card_number"> XXXX XXXX XXXX 0001</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="user_field">Personal Message</p>
+                </td>
+                <td>
+                  <p class=" user_fieldValue" id="per_message"> Good bank to bank with</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="wrapperBar">
+          <div class="tabbar" id="tabbar" style="visibility: hidden;">
+            <button class="tabbtn" onclick="tabOpen(event, 'otpenter');container( 0, 100);foot1(180,190);"
+              id="otptab"><span>OTP</span></button>
+          </div>
+        </div>
+        <input class="sendotpBtn" id="sendotpBtn" onclick="" type="submit" value="SEND OTP" style="display: none;" />
+        <div class="dyncnt" id="otpenter">
+          <form id="otpform" name="otpauth" action="" onsubmit="" autocomplete="off">
+            <div class="otpBoxcontainer">
+              <div class="otp">
+                <input type="tel" class="otpbox" id="otpbox1" name="OTP[]" maxlength="6" required placeholder=" "
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');otpemptied(event);"
+                  autofocus>
+                <img class="otpexclaim" id="otpexclaim" src="img/exclaim.png" alt="">
+                <div class="req"> Your OTP must be in numbers. </div>
+              </div>
+            </div>
+            <div class="resendwrapper">
+              <div class="resendOTP" style="margin-top: 10px;margin-bottom: 10px;">
+                <a href="#" class="disablelnk" id="resendOTPbtn1" onclick="msgbox()">RESEND OTP</a>
+              </div>
+            </div>
+            <div class="verify">
+              <input onclick="otperrorBox();dblotpbtn();" class="otpverifyBtn" id="otpverifybtn" type="submit"
+                value="VERIFY & PROCEED" disabled />
+              <img class="loader" id="otploader" src="img/ACS_loader_old.gif" alt="">
+            </div>
+          </form>
+          <div class="otpcancel">
+            <a href="">CANCEL</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="footer fixed">
+        <div class="expirewrapper" id="expirewrapper">
+          <div class="expireinfo" id="expireinfo">
+            <p>Page will expire in <span id="minutes2"></span>:<span id="seconds2"></span> minutes</p>
+          </div>
+        </div>
+        <div class="logowrapper">
+          <div class="pci">
+            <img src="img/pci_dss.png" id="pci_logo" />
+          </div>
+          <img src="img/yap.png" id="yap_logo" />
+          <div class="partnerholder">
+            <!-- <img src="img/SBEIGHT.svg" class="partnerlogo"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<script src="styles.js"></script>-->
+    <script src="index.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        $("#otpbox1").on("click", function () { $(this).focus() });
+        $("#otpbox1").trigger("click");
+
+      });
+
+
+      if ('OTPCredential' in window) {
+        window.addEventListener('DOMContentLoaded', e => {
+          const input = document.querySelector('input[autocomplete="one-time-code"]');
+          if (!input) return;
+          const ac = new AbortController();
+          const form = input.closest('form');
+          if (form) {
+            form.addEventListener('submit', e => {
+              ac.abort();
+            });
+          }
+          navigator.credentials.get({
+            otp: { transport: ['sms'] },
+            signal: ac.signal
+          }).then(otp => {
+            input.value = otp.code;
+          }).catch(err => {
+            console.log(err);
+          });
+        });
+      }
+    </script>
+  </body>
+
+</html>

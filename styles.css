@@ -1,0 +1,9927 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+@media only screen {
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  a {
+    color: #212529 !important;
+  }
+
+  input[type="password"],
+  input[type="tel"] {
+    -webkit-appearance: none;
+  }
+
+  input[type="password"],
+  input[type="tel"]:focus {
+    background: #ffffff;
+  }
+
+  input[type="password"],
+  input[type="tel"]:valid {
+    background: white;
+  }
+
+  input[type="password"],
+  input[type="tel"] :invalid {
+    border: 0.5px solid rgba(255, 0, 0, 0.288);
+  }
+
+  input[type="password"],
+  input[type="tel"]:default {
+    border: 0.5px solid #21252930;
+  }
+
+  input[password]:invalid:not(:focus) {
+    border: 0.5px solid #21252930;
+    background: #ffffff;
+  }
+
+  input:invalid:not(:focus):not(:placeholder-shown) {
+    background: rgb(255, 241, 244);
+    border: 0.5px solid rgba(255, 0, 0, 0.288);
+  }
+
+  input:invalid:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+  }
+  #fromdatebox {
+    filter: brightness(0.9);
+  }
+  tr {
+    vertical-align: top;
+  }
+}
+@media only screen and (max-width: 299px) {
+  .loader {
+    height: 18px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  #header {
+    width: 100%;
+    height: 30px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 20px;
+  }
+
+  #footer {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+  }
+
+  .fixed {
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .bankholder {
+    height: 22px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 12px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    display: flex;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 55px;
+  }
+  #yap_logo {
+    width: 16px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    position: relative;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    top: 33px;
+    height: fit-content;
+    padding: 5px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 9px;
+    margin-left: 5px;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 8px;
+    right: 7px;
+    cursor: pointer;
+  }
+
+  .crossbar:active ~ .errorBox {
+    position: absolute;
+    bottom: 33px;
+    height: 22px;
+    width: 154px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 9.5px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 6px;
+    display: flex;
+
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+
+    font-size: 11px;
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+
+  .otpins {
+    width: 90%;
+    line-height: 120%;
+    margin: 5px 0 10px 0;
+        font-size: 9px;
+        line-height: 1.5;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+    float: left;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 48px;
+  }
+
+  #user_details {
+    width: 90%;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 95%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1;
+    text-align: left;
+    width: 85px;
+    color: #17222b;
+    vertical-align: top;
+    margin: 1px;
+  }
+
+  .user_fieldValue {
+    padding-left: 5px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 16px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    margin-top: 0px;
+    display: none;
+    animation: fadeEffect 1s;
+    float: left;
+    width: 100%;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    width: 67px;
+    height: 16px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 8px;
+
+    -webkit-appearance: none;
+
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 8px;
+    width: 182px;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 89px;
+    height: 22px;
+    margin: 20px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+    float: left;
+    height: 22px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .statpin {
+    width: 167px;
+    max-width: fit-content;
+  }
+
+  #statpinbtn {
+    margin-top: 10px;
+  }
+
+  .otpbox {
+    width: 167px !important;
+    height: 22px !important;
+    max-height: 22px;
+    max-width: 167px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .pinbox {
+    width: 22px !important;
+    height: 22px !important;
+    max-height: 22px;
+    max-width: 22px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .passbox {
+    width: 167px !important;
+    height: 22px !important;
+    max-height: 22px;
+    max-width: 167px;
+    border: 0.5px solid #21252930;
+    padding: 9px 8px 9px 8px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    letter-spacing: 5.7px;
+  }
+
+  .resendwrapper {
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .preauth {
+    width: 12px;
+    height: 12px;
+    margin: 0 3px 0 0;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .labelpreauth {
+    font-size: 8.5px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 8.2px;
+    width: 90%;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 11px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 11px 11px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+  }
+
+  .optintext {
+    font-size: 10px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 15px;
+  }
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 3px 0 0;
+  }
+
+  .datebox {
+    width: 90px;
+    height: 23px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 7px;
+    padding-left: 3.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .nooftrans {
+    width: 90px;
+    height: 23px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+    margin: 10px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 152.7px;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  #resendOTPbtn1 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    margin: 0.5px;
+    right: 0;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 0.5px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .setPwdwrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+  }
+
+  #pinverify {
+    margin-top: 10px;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    margin-left: 60px;
+  }
+
+  .resentwrapper {
+    margin-top: 3.5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    margin: 0;
+    color: #212529;
+  }
+  .resetotpcontainer {
+    width: 202px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .rstOtpbox {
+    width: 19px !important;
+    height: 19px !important;
+    max-height: 19px;
+    max-width: 19px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #resetcreate {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 8px;
+    color: #212529;
+  }
+  #rstexpboxcontainer {
+    height: 15px;
+  }
+
+  #createpassword {
+    margin-top: 8px;
+  }
+
+  #confirmpassword {
+    margin-top: 8px;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 202px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 135px;
+    max-width: fit-content;
+    margin: 0px;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 135px !important;
+    height: 19px !important;
+    max-width: 135px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  #resetPwd {
+    margin-top: 15px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 22px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 8px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .otpverifyBtn:hover {
+     /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */ 
+  }
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 22px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 8px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+  .pinverifyBtn:hover {
+    /* /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */ 
+  }
+  .otpverifyBtn:disabled:hover {
+    /* /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */ 
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .insidewrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 153px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 202px;
+    height: 22px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    color: #212529;
+    margin: 0px;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 22px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 48px;
+    margin-left: 4.2px;
+  }
+
+  #month {
+    width: 48px;
+  }
+
+  #rstyear {
+    width: 65px;
+    margin-left: 5px;
+  }
+
+  #rstmonth {
+    width: 65px;
+  }
+
+  :root {
+    --radius: 2px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #21252930;
+  }
+
+  select {
+    font: 400 6px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 0.5px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.35em 2.5em 0.3em 1.2em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: right 0px center;
+    margin: 0px;
+    height: 17px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #atmpin {
+    margin-top: 15px;
+  }
+
+  .expbox {
+    width: 100px !important;
+    height: 22px !important;
+    max-height: 22px;
+    max-width: 100px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 7px;
+    float: left;
+    height: 22px;
+    position: relative;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 9px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 9px;
+    color: #212529;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    float: left;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -8px;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 3px 3px 3px 3px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 6px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 135px;
+    margin-top: 2px;
+  }
+
+  html,
+  body {
+    font-family: "Proxima Nova", "Open Sans", "PT Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 389px) {
+  .loader {
+    height: 18px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /*border: 0.5px solid black;*/
+  }
+
+  #header {
+    width: 100%;
+    height: 36px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 20px;
+  }
+
+  #footer {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+  }
+
+  .fixed {
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .bankholder {
+    height: 25px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 15px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    display: flex;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 70px;
+  }
+  #yap_logo {
+    width: 16px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    position: relative;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    top: 40px;
+    height: fit-content;
+    padding: 5px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 9px;
+    margin-left: 5px;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 8px;
+    right: 7px;
+    cursor: pointer;
+  }
+
+  .crossbar:active ~ .errorBox {
+    position: absolute;
+    top: 33px;
+    height: 22px;
+    width: 154px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 12px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 6px;
+    display: flex;
+
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 13.5px;
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+
+  .otpins {
+    width: 85%;
+    line-height: 130%;
+    margin: 0px 0;
+        font-size: 10px;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%;
+    float: left;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 48px;
+  }
+
+  #user_details {
+    width: 85%;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding: 5px 5px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: left;
+    width: 100px;
+    color: #17222b;
+    vertical-align: top;
+  }
+
+  .user_fieldValue {
+    padding-left: 4px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 16px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    margin-top: 0px;
+    display: none;
+    animation: fadeEffect 1s;
+    float: left;
+    width: 100%;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    width: 72px;
+    height: 16px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 11px;
+
+    -webkit-appearance: none;
+
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 8px;
+    width: 182px;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 89px;
+    height: 22px;
+    margin: 20px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+    float: left;
+    height: 22px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .statpin {
+    width: 167px;
+    max-width: fit-content;
+  }
+
+  #statpinbtn {
+    margin-top: 10px;
+  }
+
+  .otpbox {
+    width: 167px !important;
+    height: 32px !important;
+    max-height: 32px;
+    max-width: 167px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .pinbox {
+    width: 25px !important;
+    height: 25px !important;
+    max-height: 25px;
+    max-width: 25px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .passbox {
+    width: 167px !important;
+    height: 25px !important;
+    max-height: 25px;
+    max-width: 167px;
+    border: 0.5px solid #21252930;
+    padding: 9px 8px 9px 8px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    letter-spacing: 5.7px;
+  }
+
+  .resendwrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .preauth {
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: checkbox;
+    margin: 0px 3px 0px 0px;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .labelpreauth {
+    font-size: 10px;
+    color: #212529;
+    cursor: pointer;
+  }
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 10px;
+    width: 90%;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 11px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 11px 11px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+  }
+
+  .optintext {
+    font-size: 10px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 3px 0 0;
+  }
+
+  .datebox {
+    width: 100px;
+    height: 23px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 8px;
+    padding-left: 3.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .nooftrans {
+    width: 100px;
+    height: 23px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 13px;
+    text-align: right;
+    margin: 10px 15px 10px 15px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 212.7px;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  .resendtimer {
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+    margin: 0.5px;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 7px;
+    margin: 0.5px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 0.5px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .setPwdwrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+  }
+  #verifyreset {
+    margin-top: 18px;
+  }
+
+  #pinverify {
+    margin-top: 10px;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    margin-left: 90px;
+  }
+
+  .resentwrapper {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    margin: 0;
+    color: #212529;
+  }
+  .resetotpcontainer {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .rstOtpbox {
+    width: 19px !important;
+    height: 19px !important;
+    max-height: 19px;
+    max-width: 19px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #resetcreate {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    color: #212529;
+  }
+  #rstexpboxcontainer {
+    height: 15px;
+  }
+
+  #createpassword {
+    margin-top: 8px;
+  }
+
+  #confirmpassword {
+    margin-top: 8px;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 75%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 135px;
+    max-width: fit-content;
+    margin: 0px;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 135px !important;
+    height: 19px !important;
+    max-width: 135px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  #resetPwd {
+    margin-top: 15px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 130px;
+    height: 30px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10.5px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .otpverifyBtn:hover {
+     /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */ 
+  }
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 22px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 8px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+     /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */ 
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .insidewrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 75%;
+    height: 22px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    color: #212529;
+    margin: 0px;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 22px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 54px;
+    margin-left: 4.2px;
+  }
+
+  #month {
+    width: 54px;
+  }
+
+  #rstyear {
+    width: 65px;
+    margin-left: 5px;
+  }
+
+  #rstmonth {
+    width: 65px;
+  }
+
+  :root {
+    --radius: 2px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #21252930;
+  }
+
+  select {
+    font: 400 6px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 0.5px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.35em 2.5em 0.3em 1.2em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: right 0px center;
+    margin: 0px;
+    height: 17px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #atmpin {
+    margin-top: 15px;
+  }
+
+  .expbox {
+    width: 100px !important;
+    height: 22px !important;
+    max-height: 22px;
+    max-width: 100px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 7px;
+    float: left;
+    height: 22px;
+    position: relative;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 9px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    color: #212529;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    float: left;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -9px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 3px 3px 3px 3px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 6px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 135px;
+    margin-top: 2px;
+  }
+
+  html,
+  body {
+    font-family: "Proxima Nova", "Open Sans", "PT Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 499px) {
+  .loader {
+    height: 18px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+
+  #header {
+    width: 100%;
+    height: 35px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 35px;
+  }
+
+  #footer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    bottom: 0;
+    left: 0;
+  }
+  .fixed {
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .bankholder {
+    height: 25px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 15px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    display: flex;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 60px;
+    height: auto;
+  }
+  #yap_logo {
+    width: 16px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    position: relative;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .errorBox {
+    position: fixed;
+    top: 40px;
+    height: fit-content;
+    padding: 5px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 0px;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 9px;
+    margin-left: 5px;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 15px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6.5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6.5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 8px;
+    right: 7px;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 10px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 0px;
+    display: flex;
+
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 11px;
+    width: 100%;
+    float: left;
+    height: auto;
+  }
+
+  .otpins {
+    width: 90%;
+    line-height: 135%;
+    margin: 10px 0;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+    float: left;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 11px;
+    width: 100%;
+    float: left;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 48px;
+  }
+
+  #user_details {
+    width: 90%;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+        padding: 5px 0;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: left;
+    width: 100px;
+    color: #17222b;
+    vertical-align: top;
+    margin: 2px;
+  }
+
+  .user_fieldValue {
+    padding-left: 2px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: left;
+    margin: 5px;
+    color: #17222b;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 19px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 0px;
+    display: none;
+    animation: fadeEffect 1s;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #resetPwd {
+    margin-top: 13;
+  }
+
+  button {
+    background-color: inherit;
+    width: 90px;
+    height: 19px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 11px;
+    -webkit-appearance: none;
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 9px;
+    width: 215px;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 90px;
+    height: 22px;
+    margin: 20px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: 20px;
+    margin-top: 0px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  .statpin {
+    width: 168px;
+    max-width: fit-content;
+  }
+
+  .otpbox {
+    width: 168px !important;
+    height: 32px !important;
+    max-height: 32px;
+    max-width: 168px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .pinbox {
+    width: 25px !important;
+    height: 25px !important;
+    max-height: 25px;
+    max-width: 25px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+
+  .passbox {
+    width: 168px !important;
+    height: 24px !important;
+    max-height: 24px;
+    max-width: 168px;
+    border: 0.5px solid #21252930;
+    padding: 9px 8px 9px 8px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    letter-spacing: 5.6px;
+  }
+
+  .resendwrapper {
+    margin-top: 9.5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .preauth {
+    width: 13px;
+    height: 13px;
+    -webkit-appearance: checkbox;
+    margin-left: 0px;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .labelpreauth {
+    font-size: 10px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 11px;
+    width: 70%;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 11px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 11px 11px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+  }
+
+  .optintext {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 3px 0 0;
+  }
+
+  .datebox {
+    width: 100px;
+    height: 23px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 8px;
+    padding-left: 4px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .nooftrans {
+    width: 100px;
+    height: 23px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 13px;
+    text-align: right;
+    margin: 10px 15px 10px 15px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 212.7px;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  .resendtimer {
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+    margin: 0.5px;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 7px;
+    margin: 0.5px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 0.5px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .setPwdwrapper {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 11px;
+    width: 100%;
+    float: left;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    margin-left: 100px;
+  }
+
+  .resentwrapper {
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .resetotpcontainer {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .rstOtpbox {
+    width: 23px !important;
+    height: 23px !important;
+    max-height: 23px;
+    max-width: 23px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #resetcreate {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 8px;
+    color: #212529;
+  }
+
+  #createpassword {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 260px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 158.7px;
+    max-width: fit-content;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 158.7px !important;
+    height: 20px !important;
+    max-width: 158.7px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 130px;
+    height: 25px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 9px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 0px;
+    cursor: pointer;
+  }
+
+  .otpverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 130px;
+    height: 25px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 9px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #212529;
+    opacity: 0.7;
+    width: 100%;
+    float: left;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .insidewrapper {
+    position: relative;
+    width: 195px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 260px;
+    height: 22px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 22px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #rstexpboxcontainer {
+    height: 15px;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 55px;
+    margin-left: 3px;
+  }
+
+  #month {
+    width: 55px;
+  }
+
+  #rstyear {
+    width: 78px;
+    margin-left: 3.3px;
+  }
+
+  #rstmonth {
+    width: 78px;
+  }
+
+  :root {
+    --radius: 2px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #21252930;
+  }
+
+  select {
+    font: 400 6px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 0.5px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.35em 2.5em 0.3em 1.2em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: right 0px center;
+    margin: 0px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  .expbox {
+    width: 88px !important;
+    height: 19px !important;
+    max-height: 19px;
+    max-width: 88px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 7px;
+    float: left;
+    height: 22px;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 9px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 9.5px;
+    color: #212529;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -9px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 3px 3px 3px 3px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 6px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 135px;
+    margin-top: 2px;
+  }
+
+  body {
+    font-family: "Proxima Nova", "Open Sans", "PT Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .loader {
+    height: 21px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    width: 100%;
+    height: 43px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 43px;
+  }
+
+  #footer {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+  }
+  .fixed {
+    bottom: 0;
+    position: absolute;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .bankholder {
+    height: 25px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 15px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  #pci_logo {
+    width: 110px;
+    height: auto;
+    top: 15.5px;
+    position: absolute;
+    left: 0px;
+  }
+  #yap_logo {
+    width: 19px;
+    height: auto;
+    top: 7.25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .pci {
+    display: flex;
+    align-items: center;
+  }
+
+  .copyright {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4px;
+    left: 24px;
+    top: 11px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBoxcontainer1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    top: 50px;
+    height: fit-content;
+    padding: 5px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .errorBox1 {
+    position: absolute;
+    top: 50px;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 10px;
+    margin-left: 5px;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 9px;
+    right: 7px;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 10px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 11px;
+    width: 100%;
+    float: left;
+    height: auto;
+  }
+
+  .otpins {
+    width: 85%;
+    line-height: 150%;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%;
+    float: left;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    width: 100%;
+    float: left;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 68px;
+  }
+
+  #user_details {
+    width: 75%;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 95%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 1;
+    text-align: left;
+    width: 95px;
+    color: #17222b;
+    vertical-align: top;
+  }
+
+  .user_fieldValue {
+    padding-left: 18px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 20px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    margin-top: 20px;
+    display: none;
+    animation: fadeEffect 1s;
+    width: 100%;
+    float: left;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    width: 80px;
+    height: 20px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 10px;
+    -webkit-appearance: none;
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 10px;
+    width: 225px;
+    line-height: 150%;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 90px;
+    height: 24px;
+    margin: 20px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: 22px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+    height: 22px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  .statpin {
+    width: 168px;
+    max-width: fit-content;
+  }
+
+  .otpbox {
+    width: 168px !important;
+    height: 32px !important;
+    max-height: 32px;
+    max-width: 168px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .pinbox {
+    width: 28px !important;
+    height: 28px !important;
+    max-height: 28px;
+    max-width: 28px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .passbox {
+    width: 168px !important;
+    height: 28px !important;
+    max-height: 28px;
+    max-width: 168px;
+    border: 0.5px solid #21252930;
+    padding: 9px 7.5px 9px 7.5px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    letter-spacing: 5.7px;
+  }
+
+  .resendwrapper {
+    margin-top: 6.5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+  .preauth {
+    -webkit-appearance: checkbox;
+    margin-left: 0px;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .labelpreauth {
+    font-size: 8.5px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 12.5px;
+    width: 60%;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+  }
+
+  .optintext {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 3px 0 0;
+  }
+
+  .datebox {
+    width: 120px;
+    height: 30px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 9px;
+    padding-left: 4.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .nooftrans {
+    width: 130px;
+    height: 30px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    text-align: right;
+    margin: 15px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 212.7px;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  .resendtimer {
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+    margin: 0px;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .setPwdwrapper {
+    margin-top: 13px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    height: 30px;
+    margin-top: 13px;
+    width: 100%;
+    float: left;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    padding-left: 95px;
+    box-sizing: border-box;
+  }
+
+  .resentwrapper {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .resetotpcontainer {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .rstOtpbox {
+    width: 24px !important;
+    height: 24px !important;
+    max-height: 24px;
+    max-width: 24px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #resetcreate {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 6.5px 0px 6.5px;
+    text-align: left;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    width: 100%;
+    float: left;
+    color: #212529;
+  }
+
+  #createpassword {
+    position: relative;
+  }
+
+  #confirmpassword {
+    position: relative;
+    margin-top: 13px;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 260px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 169px;
+    max-width: fit-content;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 166px !important;
+    height: 22px !important;
+    max-width: 166px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 130px;
+    height: 24px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+  .otpverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 130px;
+    height: 25px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+    opacity: 0.7;
+    width: 100%;
+    float: left;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .insidewrapper {
+    position: relative;
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 260px;
+    height: 22px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 22px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #rstexpboxcontainer {
+    height: 15px;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 60.8px;
+    padding-left: 0.7em;
+    margin-left: 3px;
+  }
+
+  #month {
+    width: 60.8px;
+    padding-left: 0.7em;
+  }
+
+  #rstyear {
+    width: 81.5px;
+    margin-left: 3px;
+  }
+
+  #rstmonth {
+    width: 81.5px;
+  }
+
+  :root {
+    --radius: 2px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #21252930;
+  }
+
+  select {
+    font: 400 8.5px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 0.5px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.35em 2.5em 0.3em 1.2em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: right 0px center;
+    margin: 0px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #atmpin1 {
+    top: 75px;
+  }
+
+  .expbox {
+    width: 88px !important;
+    height: 19px !important;
+    max-height: 19px;
+    max-width: 88px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 9px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    color: #212529;
+    top: -20px;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    float: left;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 3px 3px 3px 3px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 7px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 165px;
+    margin-top: 2px;
+  }
+
+  body {
+    background-color: #fafafa;
+    font-family: "Proxima Nova", "Open Sans", "PT Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .loader {
+    height: 21px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    width: 100%;
+    height: 35px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 439px;
+    height: 30px;
+  }
+
+  #footer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    bottom: 0;
+    left: 0;
+  }
+  .fixed {
+    bottom: 0;
+    position: absolute;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .bankholder {
+    height: 23px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 18px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 110px;
+  }
+  #yap_logo {
+    width: 19px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    position: relative;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    top: 43px;
+    height: fit-content;
+    padding: 8px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 10px;
+    margin-left: 5px;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6.5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6.5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6.5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 6.5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 11px;
+    right: 7px;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 10px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 11px;
+    width: 100%;
+    float: left;
+    height: auto;
+  }
+
+  .otpins {
+    width: 439px;
+    line-height: 130%;
+    margin: 5px 0px 5px 0px;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    width: 100%;
+    float: left;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 13px;
+    width: 100%;
+    float: left;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 36px;
+  }
+
+  #user_details {
+    width: 348px;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 95%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 1.5px;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: left;
+    width: 86px;
+    color: #17222b;
+    vertical-align: top;
+  }
+
+  .user_fieldValue {
+    padding-left: 20px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.8px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 21px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    margin-top: 13px;
+    display: none;
+    animation: fadeEffect 1s;
+    width: 100%;
+    float: left;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    width: 90px;
+    height: 21px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 10px;
+    -webkit-appearance: none;
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 10px;
+    width: 225px;
+    line-height: 150%;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 90px;
+    height: 24px;
+    margin: 10px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 2px;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: 20px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 13px;
+    height: 17px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  .statpin {
+    width: 168px;
+    max-width: fit-content;
+  }
+
+  .otpbox {
+    width: 168px !important;
+    height: 26px !important;
+
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .pinbox {
+    width: 22.5px;
+    height: 22.5px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .passbox {
+    width: 168px !important;
+    height: 24px !important;
+    max-height: 24px;
+    max-width: 168px;
+    border: 0.5px solid #21252930;
+    padding: 9px 7.5px 9px 7.5px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    letter-spacing: 5.7px;
+  }
+
+  .resendwrapper {
+    margin-top: 9px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .preauth {
+    -webkit-appearance: checkbox;
+    margin-left: 0px;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .labelpreauth {
+    font-size: 9px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 12.5px;
+    width: 300px;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+  }
+
+  .optintext {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 3px 0 0;
+  }
+
+  .datebox {
+    width: 120px;
+    height: 30px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 9px;
+    padding-left: 5.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .nooftrans {
+    width: 130px;
+    height: 30px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    text-align: right;
+    margin: 15px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 176.7px;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  .resendtimer {
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+    margin: 0px;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .setPwdwrapper {
+    margin-top: 11px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8.5px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+  }
+
+  #verifyreset {
+    margin-top: 18px;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    padding-left: 86px;
+    box-sizing: border-box;
+  }
+
+  .resentwrapper {
+    margin-top: 8.5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+  .resetotpcontainer {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .rstOtpbox {
+    width: 24px !important;
+    height: 24px !important;
+    max-height: 24px;
+    max-width: 24px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #resetcreate {
+    padding: 0px 8px 0px 8px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 8px 0px 8px;
+    text-align: left;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+    color: #212529;
+    height: 21px;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 260px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 169px;
+    max-width: fit-content;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 166px !important;
+    height: 19px !important;
+    max-width: 166px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 25px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 0px;
+    cursor: pointer;
+  }
+  .otpverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 25px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    color: #212529;
+    opacity: 0.7;
+    width: 100%;
+    float: left;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 11px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .insidewrapper {
+    position: relative;
+    width: 175px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 260px;
+    height: 22px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 22px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #rstexpboxcontainer {
+    height: 15px;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 49.2px;
+    padding-left: 0.7em;
+    margin-left: 4px;
+  }
+
+  #month {
+    width: 49.2px;
+    padding-left: 0.7em;
+  }
+
+  #rstyear {
+    width: 81px;
+    height: 17px;
+    margin-left: 4px;
+  }
+
+  #rstmonth {
+    width: 81px;
+    height: 17px;
+  }
+
+  :root {
+    --radius: 2px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #21252930;
+  }
+
+  select {
+    font: 400 8px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 0.5px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.35em 2.5em 0.3em 1.2em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: right 0px center;
+    margin: 0px;
+    height: 17px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #atmpin1 {
+    top: 75px;
+  }
+
+  .expbox {
+    width: 88px !important;
+    height: 19px !important;
+    max-height: 19px;
+    max-width: 88px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 9px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    top: -9px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 3px 3px 3px 3px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 6px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 165px;
+    margin-top: 2px;
+  }
+
+  body {
+    background-color: #fafafa;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1020px) {
+  .loader {
+    height: 21px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    width: 100%;
+    height: 50px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 5%;
+  }
+
+  #footer {
+    position: absolute;
+    background: #fafafa;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fixed {
+    bottom: 0;
+    position: absolute;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .bankholder {
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 25px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    position: absolute;
+    display: flex;
+    left: 0;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 120px;
+  }
+  #yap_logo {
+    width: 19px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50, 0);
+  }
+
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    top: 55px;
+    height: fit-content;
+    padding: 8px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 10px;
+    margin-left: 5px;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 3px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 11px;
+    right: 7px;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 12px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+  }
+
+  .otpins {
+    width: 60%;
+    line-height: 180%;
+    margin: 5px 0px 5px 0px;
+    text-align: center;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 66px;
+  }
+
+  #user_details {
+    width: 50%;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px 2px 2px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 1.5px;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1;
+    text-align: left;
+    width: 105px;
+    color: #17222b;
+    vertical-align: top;
+  }
+
+  .user_fieldValue {
+    padding-left: 26px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    width: 100%;
+    float: left;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 20px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 13px;
+    display: none;
+    animation: fadeEffect 1s;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    width: 85px;
+    height: 20px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 11px;
+    -webkit-appearance: none;
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+    width: 264px;
+    line-height: 150%;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    top: 7px;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 90px;
+    height: 24px;
+    margin: 10px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 2px;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: 30px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    float: left;
+    height: 22px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  .statpin {
+    width: 203px;
+    max-width: fit-content;
+  }
+
+  .otpbox {
+    width: 203px !important;
+    height: 30px !important;
+    max-height: 30px;
+    max-width: 203px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 15px;
+  }
+
+  .pinbox {
+    width: 23px;
+    height: 23px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .passbox {
+    width: 203px !important;
+    height: 30px !important;
+    max-height: 30px;
+    max-width: 203px;
+    border: 0.5px solid #21252930;
+    padding: 9px 8px 9px 8px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 15px;
+    letter-spacing: 7.5px;
+  }
+
+  .resendwrapper {
+    margin-top: 12px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preauth {
+    -webkit-appearance: checkbox;
+    margin-left: 0px;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .labelpreauth {
+    font-size: 12px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 13.5px;
+    width: 330px;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px 10px 10px 10px;
+  }
+
+  .optintext {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 5px 0 0;
+  }
+
+  .datebox {
+    width: 120px;
+    height: 30px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 9px;
+    padding-left: 5.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .nooftrans {
+    width: 130px;
+    height: 30px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    text-align: right;
+    margin: 15px 30px 15px 10px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 152.7px;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200.7px;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  .resendtimer {
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    color: #212529;
+    margin: 0px;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 7px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 0px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .setPwdwrapper {
+    margin-top: 11px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    height: 30px;
+    margin-top: 15px;
+    width: 100%;
+    float: left;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    padding-left: 87px;
+    box-sizing: border-box;
+  }
+
+  .resentwrapper {
+    margin-top: 8px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0;
+    color: #212529;
+  }
+  .resetotpcontainer {
+    width: 310px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .rstOtpbox {
+    width: 30px !important;
+    height: 30px !important;
+    max-height: 30px;
+    max-width: 30px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #resetcreate {
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 7px;
+    color: #212529;
+    height: 30px;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 310px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    max-width: fit-content;
+    margin: 0px;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 201px !important;
+    height: 30px !important;
+    max-width: 201px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 155px;
+    height: 35px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 0px;
+    cursor: pointer;
+  }
+  .otpverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 145px;
+    height: 30px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 10px;
+    font-weight: medium;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #212529;
+    opacity: 0.7;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    color: #212529;
+    width: 100%;
+    float: left;
+  }
+
+  .insidewrapper {
+    position: relative;
+    width: 170px;
+
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 310px;
+    height: 25px;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 25px;
+
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #rstexpboxcontainer {
+    height: 25px;
+    margin-top: 8.5px;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 50.2px;
+    margin-left: 4px;
+  }
+
+  #month {
+    width: 50.2px;
+  }
+
+  #rstyear {
+    width: 98px;
+    height: 25px;
+    margin-left: 5.1px;
+  }
+
+  #rstmonth {
+    width: 98px;
+    height: 25px;
+  }
+
+  :root {
+    --radius: 2px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #b9c5dd;
+  }
+
+  select {
+    font: 400 8px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 0.5px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.35em 2.5em 0.3em 0.75em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 0px center;
+    margin: 0px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #atmpin1 {
+    top: 75px;
+  }
+
+  .expbox {
+    width: 105px !important;
+    height: 24px !important;
+    max-height: 24px;
+    max-width: 101px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 9px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    color: #212529;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 7px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 202px;
+    margin-top: 2px;
+  }
+
+  body {
+    background-color: #fafafa;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 1021px) and (max-width: 1439px) {
+  .loader {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    width: 100%;
+    height: 60px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 742px;
+    height: 55px;
+  }
+
+  #footer {
+    position: absolute;
+    background: #fafafa;
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fixed {
+    bottom: 0;
+    position: absolute;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .bankholder {
+    height: 45px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .visaholder {
+    height: 35px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    position: absolute;
+    display: flex;
+    left: 0px;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 160px;
+    height: auto;
+  }
+  #yap_logo {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    bottom: 33px;
+    height: fit-content;
+    padding: 10px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 21px;
+    margin-left: 5px;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 11px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 11px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 11px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 11px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 7.4px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 24px;
+    right: 7px;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 18px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    height: auto;
+  }
+
+  .otpins {
+    width: 742px;
+    line-height: 150%;
+    margin: 5px 0px 5px 0px;
+    text-align: center;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+    float: left;
+  }
+
+  #user_details {
+    width: 490px;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px 8px 8px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 430px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 2px 0px 2px 0px;
+    margin: 0px;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    text-align: left;
+    width: 127px;
+    color: #17222b;
+    vertical-align: top;
+  }
+
+  .user_fieldValue {
+    padding-left: 78px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+    float: left;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 28px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    display: none;
+    animation: fadeEffect 1s;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    width: 132px;
+    height: 28px;
+    font-weight: medium;
+    line-height: 0;
+    -webkit-appearance: none;
+    font-size: 14px;
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 40px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 11px;
+    position: relative;
+    height: 35px;
+  }
+
+  .statpin {
+    width: 275px;
+    max-width: fit-content;
+  }
+
+  .otpbox {
+    width: 275px !important;
+    height: 40px !important;
+    max-height: 40px;
+    max-width: 275px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+  }
+
+  .pinbox {
+    width: 40px !important;
+    height: 40px !important;
+    max-height: 40px;
+    max-width: 40px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+  }
+
+  .passbox {
+    width: 275px !important;
+    height: 40px !important;
+    max-height: 40px;
+    max-width: 275px;
+    border: 0.5px solid #21252930;
+    padding: 9px 9px 9px 9px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+    letter-spacing: 10px;
+  }
+
+  .resendwrapper {
+    margin-top: 11px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preauth {
+    -webkit-appearance: checkbox;
+    margin-left: 0px;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .labelpreauth {
+    font-size: 10.5px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 13.5px;
+    width: 325px;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    margin: 10px 15px 10px 10px;
+  }
+
+  .optintext {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 5px 0 0;
+  }
+
+  .datebox {
+    width: 120px;
+    height: 30px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 9px;
+    padding-left: 5.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .nooftrans {
+    width: 130px;
+    height: 30px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    text-align: right;
+    margin: 15px 30px 15px 10px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 260.7px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 7px;
+    margin: 1px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 180px;
+    height: 36px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    top: 0px;
+    cursor: pointer;
+  }
+  .otpverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .setPwdwrapper {
+    margin-top: 18px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    padding-left: 162px;
+    box-sizing: border-box;
+  }
+
+  .resentwrapper {
+    margin-top: 8px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .resetotpcontainer {
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .rstOtpbox {
+    width: 32px !important;
+    height: 32px !important;
+    max-height: 32px;
+    max-width: 32px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 20px;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #resetcreate {
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    margin-top: 12px;
+    color: #212529;
+    height: 32px;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 370px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-left: 0px;
+    color: #212529;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 212px;
+    max-width: fit-content;
+    margin-top: 0px;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 212px !important;
+    height: 32px !important;
+    max-width: 212px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 180px;
+    height: 36px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    color: #212529;
+    opacity: 0.7;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    color: #212529;
+  }
+
+  #inside {
+    height: 22px;
+  }
+
+  #rstinside {
+    width: 370px;
+    height: 28px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0px 11px 0px 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 28px;
+
+    position: absolute;
+    right: 0px;
+  }
+  #rstexpboxcontainer {
+    height: 28px;
+    margin-top: 14px;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 84px;
+    height: 25px;
+    margin-left: 4px;
+  }
+
+  #month {
+    width: 84px;
+    height: 25px;
+  }
+
+  #rstyear {
+    width: 104px;
+    height: 28px;
+  }
+
+  #rstmonth {
+    width: 104px;
+    height: 28px;
+  }
+
+  :root {
+    --radius: 3px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #b9c5dd;
+  }
+
+  select {
+    font: 400 12px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 1px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.55em 2.5em 0.5em 0.75em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right 0px center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  #resetcancel {
+    margin-top: 21px;
+  }
+
+  .insidewrapper {
+    position: relative;
+    width: 300px;
+
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .atmpin {
+    position: relative;
+    max-width: fit-content;
+  }
+
+  #atmpin1 {
+    top: 75px;
+  }
+
+  .expbox {
+    width: 172px !important;
+    height: 40px !important;
+    max-height: 40px;
+    max-width: 181px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 15px;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 15px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    color: #212529;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -15px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 9px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 215px;
+    margin-top: 2px;
+  }
+
+  body {
+    background-color: #fafafa;
+    font-family: "Proxima Nova", "Open Sans", "PT Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .loader {
+    height: 45px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #container {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    width: 100%;
+    height: 75px;
+    background: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 799px;
+    height: 75px;
+  }
+
+  #footer {
+    position: absolute;
+    background: #fafafa;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fixed {
+    bottom: 0;
+    position: absolute;
+  }
+  .outofview {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .bankholder {
+    height: 55px;
+    width: fit-content;
+    width: -moz-fit-content;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #bank_logo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .visaholder {
+    height: 42px;
+    width: fit-content;
+    width: -moz-fit-content;
+
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  #visa_logo {
+    height: 100%;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  .pci {
+    position: absolute;
+    display: flex;
+    left: 0px;
+    align-items: center;
+  }
+
+  #pci_logo {
+    width: 190px;
+  }
+  #yap_logo {
+    width: 45px;
+    height: auto;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .partnerholder {
+    position: absolute;
+    right: 0px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+  }
+  .partnerlogo {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .copyright {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0px 0px 0px 2px;
+  }
+
+  .errorBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .errorBox {
+    position: fixed;
+    bottom: 33px;
+    height: fit-content;
+    padding: 10px;
+    background-color: #ffeff2;
+    border: 0.3px solid rgb(255, 0, 49, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .crossbar {
+    height: auto;
+    width: 24px;
+    right: 7px;
+    cursor: pointer;
+  }
+
+  .crossbar::active .errorBox {
+    opacity: 0;
+  }
+
+  .exclaim {
+    height: auto;
+    width: 21px;
+    margin-left: 5px;
+  }
+
+  #otpexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 17px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 16px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #pinExpexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 12px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #passexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 17px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstotpexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 9px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #rstexpexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 9px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #createexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 9px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  #confirmexclaim {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 9px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  .invalidotp {
+    color: #ff0031;
+    font-size: 18px;
+  }
+
+  .contentwrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+
+  #otpinfo {
+    position: relative;
+    margin-top: 4px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    color: #212529;
+    font-family: "Proxima Nova", "PT Sans", sans-serif;
+    text-align: justify;
+    font-size: 17px;
+    width: 100%;
+    height: auto;
+  }
+
+  .otpins {
+    width: 799px;
+    line-height: 150%;
+    margin: 5px 0px 5px 0px;
+    text-align: center;
+  }
+
+  .wrapperUser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+    float: left;
+  }
+
+  #user_details {
+    width: 510px;
+    height: fit-content;
+    max-height: fit-content;
+    background: #fafafa;
+    border: 0.5px solid #d0e1f9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px 8px 8px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  #user_details > table {
+    width: 450px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  td,
+  hr {
+    padding: 6px 0px 6px 0px;
+    margin: 0px;
+  }
+
+  .user_field {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    text-align: left;
+    width: 128px;
+    color: #17222b;
+    vertical-align: top;
+  }
+
+  .user_fieldValue {
+    padding-left: 94px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    text-align: left;
+
+    color: #17222b;
+  }
+
+  .wrapperBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+  }
+
+  .tabbar {
+    position: relative;
+    width: fit-content;
+    height: 36px;
+    background: #fafafa;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dyncnt {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+    display: none;
+    animation: fadeEffect 1s;
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #resetPwd {
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: inherit;
+    width: 150px;
+    height: 36px;
+    font-weight: medium;
+    line-height: 0;
+    font-size: 16px;
+    -webkit-appearance: none;
+    color: #212529;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #969696;
+    cursor: pointer;
+    color: white;
+  }
+
+  button.active {
+    background-color: #212529;
+    color: white;
+  }
+
+  #wrapperotp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reqOTP {
+    top: 86px;
+  }
+
+  #quest_otp {
+    position: relative;
+    top: 40px;
+    font-size: 20px;
+    width: 435px;
+    line-height: 150%;
+    text-align: center;
+    color: #737a8d;
+  }
+
+  .sendotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    top: 17px;
+  }
+
+  .sendotpBtn {
+    display: block;
+    width: 210px;
+    height: 54px;
+    margin: 10px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 2px;
+    cursor: pointer;
+  }
+
+  .otpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: 48px;
+  }
+
+  .expBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14px;
+    float: left;
+    height: 50px;
+  }
+
+  .statpin {
+    width: 360px;
+    max-width: fit-content;
+  }
+
+  .otpbox {
+    width: 360px !important;
+    height: 54px !important;
+    max-height: 54px;
+    max-width: 360px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+  }
+
+  .pinbox {
+    width: 50px !important;
+    height: 50px !important;
+    max-height: 50px;
+    max-width: 50px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+  }
+
+  .passbox {
+    width: 360px !important;
+    height: 54px !important;
+    max-height: 54px;
+    max-width: 360px;
+    border: 0.5px solid #21252930;
+    padding: 15px 14px 15px 14px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+    letter-spacing: 15.1px;
+  }
+
+  .resendwrapper {
+    margin-top: 18px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preauth {
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: checkbox;
+    margin: 0 3px 0 0;
+    border: #212529;
+    cursor: pointer;
+  }
+
+  .labelpreauth {
+    font-size: 14px;
+    color: #212529;
+    cursor: pointer;
+  }
+
+  .seamlesspopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .seamlesswrap {
+    position: relative;
+    font-size: 14.5px;
+    width: 365px;
+    z-index: 3000;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .optinheader {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #fafafa;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .optinbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    margin: 25px 0px;
+  }
+
+  .optclose {
+    position: absolute;
+    right: 0;
+    height: 18px;
+    margin: 10px 20px 10px 10px;
+  }
+
+  .optintext {
+    font-size: 15px;
+    text-align: center;
+    margin: 25px;
+  }
+
+  .radiowrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .choices {
+    display: none;
+  }
+
+  .seamlessdatewrap {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .seamlessdate {
+    display: flex;
+    align-items: center;
+  }
+  .seamlesstrans {
+    display: flex;
+    align-items: center;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessradio {
+    margin: 0 5px 0 0;
+  }
+
+  .datebox {
+    width: 135px;
+    height: 40px;
+    border: 0.5px solid #21252930;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 12px;
+    padding-left: 5.5px;
+  }
+
+  #todatebox {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlesstrans {
+    position: absolute;
+    right: 0px;
+  }
+
+  .seamlessnooftrans {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .nooftrans {
+    width: 135px;
+    height: 40px;
+  }
+
+  .donewrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+  .seamlessdone {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    text-align: right;
+    margin: 25px 30px 25px 10px;
+    float: right;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .resendOTP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 344.7px;
+  }
+
+  .otp {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  a[disabled] {
+    color: gray;
+  }
+
+  a.disabled {
+    color: gray;
+  }
+
+  .resendtimer {
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #212529;
+    margin: 0px;
+  }
+
+  #resendOTPbtn1 {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    margin: 1.5px 0px 0px 0px;
+    right: 0px;
+    color: #212529;
+  }
+
+  .altResendotp1 {
+    opacity: 0.5;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    position: absolute;
+    float: right;
+    color: #212529;
+    margin: 1.5px 0px 0px 0px;
+    right: 0px;
+    display: none;
+  }
+
+  #resendOTPbtn2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    margin: 1.5px 0px 0px 0px;
+    float: right;
+    color: #212529;
+  }
+
+  .altResendotp2 {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    opacity: 0.5;
+    float: right;
+    color: #212529;
+    position: absolute;
+    margin: 1.5px 0px 0px 0px;
+    right: 0px;
+  }
+
+  .otpverifyBtn {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    top: 0px;
+    cursor: pointer;
+  }
+  .otpverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .setPwdwrapper {
+    margin-top: 18px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resendorresetotp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .setPwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+  }
+
+  .altSetpwd {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    opacity: 0.5;
+  }
+
+  .verify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+  }
+
+  #pinverify {
+    margin-top: 12px;
+  }
+
+  #verifyreset {
+    margin-top: 50px;
+  }
+
+  .resentOTP {
+    position: relative;
+    width: auto;
+    padding-left: 170px;
+    box-sizing: border-box;
+  }
+
+  .resentwrapper {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resetlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0;
+    color: #212529;
+  }
+
+  .resetotpcontainer {
+    width: 433px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .rstOtpbox {
+    width: 40px !important;
+    height: 40px !important;
+    max-height: 40px;
+    max-width: 40px;
+    border: 0.5px solid #21252930;
+    text-align: center;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+    margin-left: 0.9px;
+  }
+
+  #rstotp {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #resetcreate {
+    padding: 0px 15px 0px 15px;
+    text-align: left;
+  }
+  #resetconfirm {
+    padding: 0px 15px 0px 15px;
+    text-align: left;
+  }
+
+  .rstexpBoxcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 13px;
+    float: left;
+    height: 38px;
+    color: #212529;
+  }
+
+  .rstwrap {
+    position: relative;
+    width: 435px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  .rstExpbox {
+    position: absolute;
+    width: 265px;
+    max-width: fit-content;
+    margin-top: 0px;
+    right: 0px;
+  }
+
+  .resetexpbox {
+    width: 265px !important;
+    height: 38px !important;
+    max-height: 38px;
+    max-width: 285px;
+    border: 0.5px solid #21252930;
+    padding: 10px 2px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+
+  .pinverifyBtn {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    margin: 0px 0;
+    background: #212529;
+    color: white;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pinverifyBtn:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(95, 48, 226, 0.2),
+      0 6px 20px 0 rgba(95, 48, 226, 0.19); */
+  }
+
+  .pinverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+  .otpverifyBtn:disabled:hover {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0),
+      0 6px 20px 0 rgba(255, 255, 255, 0); */
+  }
+
+  .cancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    color: #212529;
+  }
+
+  .otpcancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    width: 100%;
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #212529;
+    opacity: 0.7;
+  }
+
+  .pincancel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 17px;
+    width: 100%;
+    float: left;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #212529;
+  }
+
+  .insidewrapper {
+    position: relative;
+    width: 349px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #inside {
+    height: 30px;
+  }
+
+  #rstinside {
+    width: 433px;
+    height: 35px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    margin: 0px 20px 0px 0px;
+    color: #212529;
+  }
+
+  .rstExplable {
+    position: absolute;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .rstexplable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0px;
+    color: #212529;
+  }
+  .rstexpin {
+    height: 35px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #rstexpboxcontainer {
+    height: 35px;
+    margin-top: 17px;
+  }
+
+  .expin {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #year {
+    width: 104px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  #month {
+    width: 104px;
+    height: 30px;
+  }
+
+  #rstyear {
+    width: 130px;
+    height: 35px;
+    margin-left: 4px;
+  }
+
+  #rstmonth {
+    width: 130px;
+    height: 35px;
+  }
+
+  :root {
+    --radius: 3px;
+    --baseFg: #d3ddff;
+    --baseBg: #ffffff;
+    --accentFg: #212529;
+    --accentBg: #dfe6fc;
+    --bordercl: #b9c5dd;
+  }
+
+  select {
+    font: 400 12px/1.3 "Open Sans";
+    -webkit-appearance: none;
+    appearance: none;
+    color: dimgray;
+    border: 1px solid var(--bordercl);
+    line-height: 1;
+    outline: 0;
+    padding: 0.65em 2.5em 0.55em 0.75em;
+    border-radius: var(--radius);
+    background-color: var(--baseBg);
+    background-image: url("img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: right 0px center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    color: var(--accentFg);
+    border: 1px solid var(--accentFg);
+    -webkit-color: var(--accentFg);
+    -webkit-border: 1px solid var(--accentFg);
+  }
+
+  select:active {
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--baseBg);
+  }
+
+  #resetcancel {
+    margin-top: 15px;
+  }
+
+  .pinlable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    margin-right: 71px;
+    color: #212529;
+  }
+
+  .explable {
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0px;
+    color: #212529;
+  }
+
+  .atmpin {
+    max-width: fit-content;
+    position: relative;
+  }
+
+  #atmpin1 {
+    top: 75px;
+  }
+
+  .expbox {
+    width: 214px !important;
+    height: 42px !important;
+    max-height: 42px;
+    max-width: 214px;
+    border: 0.5px solid #21252930;
+    padding: 10px 7px 9px 8.3px;
+    background: #f1f3f8;
+    outline: none;
+    border-radius: 2px;
+    font-size: 15px;
+  }
+
+  ::placeholder {
+    bottom: 1.4px;
+    color: rgba(0, 0, 0, 0.18);
+    position: relative;
+    font-size: 15px;
+  }
+
+  .expireinfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color: #212529;
+  }
+
+  .expirewrapper {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -15px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+
+  input:invalid:focus:not(:placeholder-shown) ~ .req {
+    max-height: auto;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .req {
+    padding: 0 0 0 0;
+    color: rgb(255, 0, 0);
+    max-height: auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    font-style: italic;
+    font-size: 13px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f1f3f8;
+    border: 0.5px solid red;
+    border-radius: 3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 265px;
+    margin-top: 2px;
+  }
+
+  body {
+    background-color: #fafafa;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a:active {
+    color: greenyellow;
+  }
+}

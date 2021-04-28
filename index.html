@@ -210,12 +210,15 @@
     <script src="index.js"></script>
     <script>
 
-      $(document).ready(function () {
-        setTimeout(function () {
-          $("#otpbox1").focus();
-          $("#otpbox1").click();
-        }, 600);
-      })
+      // $(document).ready(function () {
+      //   setTimeout(function () {
+      //     $("#otpbox1").focus();
+      //   }, 600);
+      // })
+
+      window.onload = function () {
+        document.getElementById("otpbox1").focus();
+      }
 
 
       // $("#otpbox1").trigger("click");

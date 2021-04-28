@@ -212,6 +212,10 @@
     <script>
 
       $(document).ready(function () {
+
+        setTimeout(() => {
+          $("#otpbox1").on("click", function () { $(this).focus() });
+        }, 600);
         $("#otpbox1").on("click", function () { $(this).focus() });
         $("#otpbox1").trigger("click");
 

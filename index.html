@@ -211,12 +211,10 @@
     <script>
 
       setTimeout(function () {
-        $("#otpbox1").on("click", function () {
-          $(this).attr('autofocus', 'autofocus');
-          $(this).focus();
-        });
-        $("#otpbox1").trigger("click");
-      })
+        $("#otpbox1").focus();
+      }, 600);
+      // $("#otpbox1").trigger("click");
+
 
 
       if ('OTPCredential' in window) {

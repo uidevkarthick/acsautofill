@@ -212,12 +212,12 @@
 
       $(document).ready(function () {
         setTimeout(() => {
-          $("#otpbox1").on("click", function () {
+          $("#otpbox1").on("focusin", function () {
             $(this).attr('autofocus', 'autofocus');
             $(this).focus();
           });
           // $("#otpbox1").on("click", function () { $(this).focus() });
-          $("#otpbox1").trigger("click");
+          $("#otpbox1").trigger("focusin");
         }, 600);
       });
 

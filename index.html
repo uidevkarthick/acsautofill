@@ -211,15 +211,14 @@
     <script>
 
       $(document).ready(function () {
-
-
-        $("#otpbox1").on("click", function () {
-          $(this).attr('autofocus', 'autofocus');
-          $(this).focus();
-        });
-        // $("#otpbox1").on("click", function () { $(this).focus() });
-        $("#otpbox1").trigger("click");
-
+        setTimeout(() => {
+          $("#otpbox1").on("click", function () {
+            $(this).attr('autofocus', 'autofocus');
+            $(this).focus();
+          });
+          // $("#otpbox1").on("click", function () { $(this).focus() });
+          $("#otpbox1").trigger("click");
+        }, 600);
       });
 
 

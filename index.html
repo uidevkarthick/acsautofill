@@ -214,13 +214,12 @@
       $(document).ready(function () {
 
 
-        $("#otpbox1").on("click", function () {
+        $("#otpbox1").on("keydown", function () {
           this.setAttribute('autofocus', 'autofocus');
           $(this).focus();
         });
-
         // $("#otpbox1").on("click", function () { $(this).focus() });
-        $("#otpbox1").trigger("click");
+        $("#otpbox1").trigger("keydown");
 
       });
 

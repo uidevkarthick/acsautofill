@@ -168,8 +168,7 @@
             <div class="otpBoxcontainer">
               <div class="otp">
                 <input type="tel" class="otpbox" id="otpbox1" name="OTP[]" maxlength="6" required placeholder=" "
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');otpemptied(event);"
-                  autofocus>
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');otpemptied(event);">
                 <img class="otpexclaim" id="otpexclaim" src="img/exclaim.png" alt="">
                 <div class="req"> Your OTP must be in numbers. </div>
               </div>
@@ -214,12 +213,12 @@
       $(document).ready(function () {
 
 
-        $("#otpbox1").on("keydown", function () {
-          $(this).setAttribute('autofocus', 'autofocus');
+        $("#otpbox1").on("click", function () {
+          $(this).attr('autofocus', 'autofocus');
           $(this).focus();
         });
         // $("#otpbox1").on("click", function () { $(this).focus() });
-        $("#otpbox1").trigger("keydown");
+        $("#otpbox1").trigger("click");
 
       });
 

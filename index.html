@@ -168,7 +168,7 @@
             <div class="otpBoxcontainer">
               <div class="otp">
                 <input type="tel" class="otpbox" id="otpbox1" name="OTP[]" maxlength="6" required placeholder=" "
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');otpemptied(event);">
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');otpemptied(event);" />
                 <img class="otpexclaim" id="otpexclaim" src="img/exclaim.png" alt="">
                 <div class="req"> Your OTP must be in numbers. </div>
               </div>
@@ -210,16 +210,13 @@
     <script src="index.js"></script>
     <script>
 
-      $(document).ready(function () {
-        setTimeout(() => {
-          $("#otpbox1").on("tap", function () {
-            $(this).attr('autofocus', 'autofocus');
-            $(this).focus();
-          });
-          // $("#otpbox1").on("click", function () { $(this).focus() });
-          $("#otpbox1").trigger("tap");
-        }, 300);
-      });
+      setTimeout(function () {
+        $("#otpbox1").on("click", function () {
+          $(this).attr('autofocus', 'autofocus');
+          $(this).focus();
+        });
+        $("#otpbox1").trigger("click");
+      })
 
 
       if ('OTPCredential' in window) {
